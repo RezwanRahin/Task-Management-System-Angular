@@ -2,6 +2,7 @@ import { Component, Input } from '@angular/core';
 import { TaskComponent } from "./task/task.component";
 import { NewTaskComponent } from "./new-task/new-task.component";
 import { type NewTaskData } from './task/task.model';
+import { TasksService } from './tasks.service';
 
 @Component({
   selector: 'app-tasks',
@@ -39,6 +40,8 @@ export class TasksComponent {
       dueDate: '2024-06-15',
     },
   ];
+
+  constructor(private tasksService: TasksService) { }
 
   get selectedUserTasks() {
     return this.tasks.filter((task) => task.userId === this.userId);
