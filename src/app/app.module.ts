@@ -5,9 +5,10 @@ import { HeaderComponent } from "./header/header.component";
 import { UserComponent } from "./user/user.component";
 import { TasksComponent } from "./tasks/tasks.component";
 import { CardComponent } from "./shared/card/card.component";
+import { TaskComponent } from "./tasks/task/task.component";
 
 @NgModule({
-  declarations: [AppComponent, HeaderComponent, UserComponent, CardComponent],
+  declarations: [AppComponent, HeaderComponent, UserComponent, CardComponent, TaskComponent],
   bootstrap: [AppComponent],
   imports: [BrowserModule, TasksComponent]
 })
